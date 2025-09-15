@@ -1,1 +1,0 @@
-# linux_basic_commands_notes

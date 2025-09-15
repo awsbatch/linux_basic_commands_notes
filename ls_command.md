@@ -1,22 +1,12 @@
-# Linux File Server Setup
+# What is `ls` Command Arguments in Linux
 
-## 🚀 Installation
-1. Update your system:
-   ```bash
-   sudo apt update && sudo apt upgrade -y
-# What is ls Command Arguments in Linux
+The `ls` command is a fundamental utility in Linux used to list files and directories. It supports various arguments (options) to customize its output, making it versatile for file management tasks. Below are the most commonly used arguments and their purposes**
 
-The `ls` command is a fundamental utility in Linux used to list files and directories.  
-It supports various arguments (options) to customize its output, making it versatile for file management tasks.  
+**Syntax**
+```bash
+ls [options] [path]
 
----
-
-## Syntax:
-
-
----
-
-## 📑 Commonly Used Arguments (Table)
+**📑 Commonly Used Arguments (Table)
 
 | Argument       | Description                                                                 |
 |----------------|-----------------------------------------------------------------------------|
@@ -32,9 +22,45 @@ It supports various arguments (options) to customize its output, making it versa
 | `-d`           | Show directories themselves, not their contents                           |
 | `-F`           | Append symbol to names (`/` dir, `*` executable, `@` symlink)             |
 | `--color=auto` | Add colors to output (to distinguish file types)                          |
+**============Practical Examples ============== ##
 
 ---
 
-## 📝 Practical Examples
+**👉 Displays detailed information about files and directories**
+```
+ls -l
+```
+**👉 List all files, including hidden ones**
+```
+ls -a
+```
+**👉 Display detailed information in human-readable format**
+```
+ls -lh
+```
+**👉 Sort files by modification time in reverse order**
+```
+ls -ltr
+```
+**👉 List files recursively, including subdirectories**
+```
+ls -R
+```
+**👉 Show inode numbers of files**
+```
+ls -i
+```
+**👉 List directories without showing their contents**
+```
+ls -d */
+```
 
-👉 **List all files, including hidden ones:**
+# ========================📌 ls Command (Advanced Options)=============================#
+
+**👉 1. Sort by time**
+```bash
+ls -lt       # newest files first
+ls -ltr      # oldest files first
+ls -ltu      # sort by last access time
+ls -ltc      # sort by last status change time
+```

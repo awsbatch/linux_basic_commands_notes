@@ -1,12 +1,19 @@
-# What is `ls` Command Arguments in Linux
+# What is ls Command Arguments in Linux
 
-The `ls` command is a fundamental utility in Linux used to list files and directories. It supports various arguments (options) to customize its output, making it versatile for file management tasks. Below are the most commonly used arguments and their purposes**
+The `ls` command is a fundamental utility in Linux used to list files and directories.  
+It supports various arguments (options) to customize its output, making it versatile for file management tasks.  
 
-**Syntax**
+---
+
+## Syntax:
+
 ```bash
 ls [options] [path]
+```
 
-**📑 Commonly Used Arguments (Table)
+---
+
+## 📑 Commonly Used Arguments (Table)
 
 | Argument       | Description                                                                 |
 |----------------|-----------------------------------------------------------------------------|
@@ -22,11 +29,14 @@ ls [options] [path]
 | `-d`           | Show directories themselves, not their contents                           |
 | `-F`           | Append symbol to names (`/` dir, `*` executable, `@` symlink)             |
 | `--color=auto` | Add colors to output (to distinguish file types)                          |
-**============Practical Examples ============== ##
+
 
 ---
+# Practical Examples 
+
 
 **👉 Displays detailed information about files and directories**
+
 ```
 ls -l
 ```
@@ -55,7 +65,7 @@ ls -i
 ls -d */
 ```
 
-# ========================📌 ls Command (Advanced Options)=============================#
+# 📌 ls Command (Advanced Options)#
 
 **👉 1. Sort by time**
 ```bash
@@ -63,4 +73,31 @@ ls -lt       # newest files first
 ls -ltr      # oldest files first
 ls -ltu      # sort by last access time
 ls -ltc      # sort by last status change time
+```
+
+**👉 2. Sorting by size**
+```
+ls -lS       # largest files first
+ls -lhS      # human-readable sizes (MB, GB)
+```
+
+**👉 3. Colorized output (default in many distros)**
+```
+ls --color=auto   # color by file type
+```
+**👉 4. Classify file types**
+```
+ls -F
+```
+This adds:  
+- `/` → directory  
+- `*` → executable  
+- `@` → symlink  
+
+
+**👉 Pro Tip You can also use alias to make ls more powerful**
+
+```
+alias ll='ls -lh --color=auto'
+alias la='ls -lha'
 ```

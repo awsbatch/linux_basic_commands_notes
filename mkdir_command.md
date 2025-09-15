@@ -1,3 +1,6 @@
+![Alt text](https://linuxhandbook.com/content/images/2020/06/mkdir-command-1.png)
+
+
 # What is mkdir command
 
 The mkdir command in Linux is used to create directories. It is a simple yet powerful command with various options to customize directory creation.

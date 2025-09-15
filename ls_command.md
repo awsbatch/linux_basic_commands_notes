@@ -1,2 +1,1 @@
-# ls Command
-What is ls in linux ?
+## What is ls in linux ?

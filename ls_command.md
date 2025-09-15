@@ -1,7 +1,6 @@
-# What is ls in linux ?
-The ls command is a fundamental utility in Linux used to list files and directories. It supports various arguments (options) to customize its output, making it versatile for file management tasks. Below are the most commonly used arguments and their purposes:
+# Linux File Server Setup
 
-##🔹Syntax:
-```
-ls [options] [path]
-```
+## 🚀 Installation
+1. Update your system:
+   ```bash
+   sudo apt update && sudo apt upgrade -y

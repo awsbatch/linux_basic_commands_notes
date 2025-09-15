@@ -1,7 +1,8 @@
-# 📁 Understanding the cd Command in Linux 
+![Alt text](https://techgeekbuzz.com/media/new_post_images/cd-Command-in-Linux.webp)
 
 
-## What is `cd` command in linux
+
+# What is `cd` command in linux
 
 The cd (Change Directory) command in Linux is used to navigate between directories in the file system. It allows users to change their current working directory to a specified location. This command is essential for managing files and directories efficiently in a Linux environment.
 cd → change directory

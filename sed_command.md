@@ -4,6 +4,8 @@
 -  It applies transformations (substitution, deletion, insertion, etc.) according to your commands.
 -  By default, it prints the result to stdout (the screen). You can redirect to a file if needed.
 
+# Line printing using `sed` command
+---
 ### General syntax:
 ```
 sed [options] 'command' file

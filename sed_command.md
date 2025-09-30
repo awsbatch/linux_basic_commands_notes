@@ -12,55 +12,69 @@ sed [options] 'command' file
 ```
 sed '' file.txt
 ```
-👉 By default, sed prints every line after processing (even with no command).
+> 👉 By default, sed prints every line after processing (even with no command).
 
 
-### 🔹 2. Print Specific Line Numbers
+### Specific line
 ```
-sed -n '5p' file.txt
+sed -n '5p' file.txt      # line 5
 ```
-👉 Prints line 5 only.
 
+### Range of lines
 ```
 sed -n '10,20p' file.txt  # lines 10–20
 ```
-👉 Prints lines 1 through 3.
 
+### First N lines
 ```
-sed -n '1p;5p;10p' file.txt
+sed -n '1,5p' file.txt    # lines 1–5
 ```
-👉 Prints lines 1, 5, and 10.
 
-### 🔹 3. Print Last Line
+### Last line
 ```
 sed -n '$p' file.txt
 ```
-👉 `$` means "last line".
 
-###🔹 4. Print Based on Patterns
+### Multiple non-continuous lines
+```
+sed -n '1p;5p;10p' file.txt
+```
+
+## 2️⃣ Print by Pattern
+
+### Lines containing pattern
 ```
 sed -n '/error/p' file.txt
 ```
-👉 Prints only lines containing error.
 
-```
-sed -n '/^#/p' file.txt
-```
-👉 Prints only lines starting with #.
-
-### Lines NOT matching pattern:
+### Lines NOT containing pattern
 ```
 sed -n '/error/!p' file.txt
 ```
 
-###🔹 5. Exclude Lines (Invert)
+###  Exclude Lines (Invert)
 ```
 sed '/error/d' file.txt
 ```
-👉 Prints all lines except those with error.
 
-### From line N to end:
+### Lines starting with #
+```
+sed -n '/^#/p' file.txt
+```
+
+### Lines between two patterns
+```
+sed -n '/BEGIN/,/END/p' file.txt
+```
+
+## 3️⃣ Advanced Tricks
+
+### Every Nth line (GNU sed only)
+```
+sed -n '1~3p' file.txt    # every 3rd line
+```
+
+### From line N to end
 ```
 sed -n '5,$p' file.txt
 ```
-

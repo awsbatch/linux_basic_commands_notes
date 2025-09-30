@@ -80,3 +80,68 @@ sed -n '1~3p' file.txt    # every 3rd line
 ```
 sed -n '5,$p' file.txt
 ```
+
+
+# 📌 Deleting Lines with sed
+---
+
+### Delete a single line:
+```
+sed '5d' file.txt
+```
+👉 Removes line 5.
+
+### Delete a range of lines:
+```
+sed '10,20d' file.txt
+```
+👉 Removes lines 10–20.
+
+### Delete from line N to the end:
+```
+sed '5,$d' file.txt
+```
+👉 Removes lines 5 to last.
+
+## Delete by Pattern
+
+### Delete lines containing a word:
+```
+sed '/error/d' file.txt
+```
+
+### Delete lines not containing a word:
+```
+sed '/error/!d' file.txt
+```
+
+### Delete lines starting with # (comments):
+```
+sed '/^#/d' file.txt
+```
+
+## Delete Ranges by Pattern
+
+### Delete between two patterns:
+```
+sed '/BEGIN/,/END/d' file.txt
+```
+👉 Removes everything between BEGIN and END (inclusive).
+
+## Advanced Deletion
+
+### Delete every Nth line (GNU sed only):
+```
+sed '1~3d' file.txt
+```
+👉 Removes every 3rd line starting from line 1.
+
+### Delete the last line:
+```
+sed '$d' file.txt
+```
+
+### Delete all blank lines:
+```
+sed '/^$/d' file.txt
+```

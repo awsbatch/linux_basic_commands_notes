@@ -145,3 +145,106 @@ sed '$d' file.txt
 ```
 sed '/^$/d' file.txt
 ```
+
+# sed Search & Replace Concepts
+
+### Basic Syntax
+```
+sed 's/pattern/replacement/' file
+```
+  - `s` → substitute command
+  - `pattern` → regex pattern to search for
+  - `replacement` → text to replace it with
+> **Note** : By default, only the first occurrence per line is replaced.
+
+### Replace All Occurrences in a Line
+Use the g (global) flag:
+```
+sed 's/cat/dog/g' animals.txt
+```
+> ➡️ Every "cat" becomes "dog" in each line.
+
+### Case-Insensitive Replacement
+Use the i flag:
+```
+sed 's/cat/dog/gi' animals.txt
+```
+> ➡️ Replaces "cat", "Cat", "CAT", etc.
+
+### In-Place Editing
+Modify the file directly with -i:
+```
+sed -i 's/cat/dog/g' animals.txt
+```
+> ➡️ File is updated in-place (⚠️ irreversible unless you back it up).
+
+**Backup version:**
+```
+sed -i.bak 's/cat/dog/g' animals.txt
+```
+> ➡️ Creates animals.txt.bak before editing.
+
+
+### Replace by Line Numbers
+Replace only in a specific line:
+```
+sed '3s/cat/dog/' animals.txt
+```
+> ➡️ Replaces only on line 3.
+
+### Replace in a range:
+```
+sed '2,5s/cat/dog/g' animals.txt
+```
+> ➡️ Replaces from line 2 to 5.
+
+### From line 2 to end:
+```
+sed '2,$s/cat/dog/g' animals.txt
+```
+
+### Replace Only the Nth Occurrence
+```
+sed 's/cat/dog/2' animals.txt
+```
+
+### Delete or Blank Out Matches
+Delete lines containing pattern:
+```
+sed '/cat/d' animals.txt
+```
+
+### Replace match with nothing:
+```
+sed 's/cat//g' animals.txt
+```
+
+### Multiple Replacements
+Chain replacements with `-e` or semicolons:
+```
+sed -e 's/cat/dog/g' -e 's/mouse/rabbit/g' file
+```
+```
+sed 's/cat/dog/g; s/mouse/rabbit/g' file
+```
+
+### Conditional Replacement
+Only replace if another pattern matches:
+```
+sed '/lion/s/cat/dog/g' animals.txt
+```
+> **➡️ Replace "cat" with "dog" only on lines containing "lion".**
+
+
+## Advanced Tricks
+
+### Replace and print modified lines only:
+```
+sed -n 's/cat/dog/p' animals.txt
+```
+
+### Insert before replacement:
+```
+sed 's/cat/[ANIMAL]&/' animals.txt
+```
+> ➡️ Turns "cat" → "[ANIMAL]cat".

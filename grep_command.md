@@ -2,12 +2,12 @@
 `grep` is a command-line tool in Linux used for searching a pattern of characters in a specific file. That pattern is called the regular expression. grep stands for Global Regular Expression Print. It prints all lines containing the pattern in a file. grep command is a useful tool to search through large text files.
 
 ## 1. Use `grep` command to search a file
+ - This is the most basic `grep` command to find a pattern of characters in a specific file.
+ - You can also enclose a pattern in single or double inverted commas. It is useful when there are multiple words to search.
 
-> This is the most basic `grep` command to find a pattern of characters in a specific file.
-> You can also enclose a pattern in single or double inverted commas. It is useful when there are multiple words to search.
-
+**Syntax**
 ```
-$ grep pattern file_name
+$ grep [options] pattern file_name
 ```
 
 ## 2. Search multiple files using `grep` command

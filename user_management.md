@@ -138,6 +138,10 @@ useradd -m -d /home/john -s /bin/bash -c "John Doe" john
 | `-g`   | Primary group                        |
 | `-G`   | Add to secondary groups              |
 
+#### Set password
+```
+passwd username
+```
 
 
 

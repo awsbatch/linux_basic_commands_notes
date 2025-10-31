@@ -111,4 +111,34 @@ This directory contains template files copied into a new user’s home directory
 
 # 👤 User Management Commands
 
+## ➤ Create User
+
+### Syntax
+```
+useradd <options> username
+```
+
+#### Create user
+```
+useradd john
+```
+#### With options:
+```
+useradd -m -d /home/john -s /bin/bash -c "John Doe" john
+```
+
+| Option | Description                          |
+| ------ | ------------------------------------ |
+| `-m`   | Create home directory                |
+| `-d`   | Specify home directory path          |
+| `-s`   | Specify login shell                  |
+| `-c`   | Comment (user’s full name)           |
+| `-e`   | Account expiration date (YYYY-MM-DD) |
+| `-u`   | Specify custom UID                   |
+| `-g`   | Primary group                        |
+| `-G`   | Add to secondary groups              |
+
+
+
+
 

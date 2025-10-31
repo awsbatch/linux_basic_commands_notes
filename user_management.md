@@ -1,3 +1,5 @@
+<img width="700" height="400" alt="Image" src="https://github.com/user-attachments/assets/fdb6309e-d548-4f7e-b38d-c835548b6ad6" />
+
 # 🧠 1. Types of Users in Linux
 ---
 ### Linux systems have three main types of users:
